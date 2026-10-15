@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>한살림경기남부 중기계획 수립을 위한 인터뷰 일정 조율</title>
+  <title>한살림경기남부 인터뷰 일정 조율</title>
   <style>
     :root{
       --green:#3d7a3a;--green-l:#e8f4e8;--green-m:#5a9e57;
@@ -229,8 +229,8 @@
     <label class="f-lbl">역할 *</label>
     <select id="f-role" class="f-inp f-sel">
       <option value="">— 선택해 주세요 —</option>
-      <option>이사회</option><option>사무국</option><option>지부/지기</option>
-      <option>분과/위원회</option><option>매장</option><option>활동조합원</option><option>인터뷰어</option>
+      <option>이사회</option><option>실무자</option><option>분과·위원회</option>
+      <option>지부·지기</option><option>조직활동가</option><option>매장활동가</option><option>인터뷰어</option>
     </select>
   </div>
 
@@ -322,7 +322,7 @@
    CONFIG
 ══════════════════════════════ */
 // Apps Script 배포 URL (apps-script.gs 설정 후 입력)
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxVe9TiT_sOvV5CWlwGjiWpesMs54WLG8dL55MbUx3FdgUlPk0947bZRotMx8ncxvR7fQ/exec';
+const SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
 
 /* 주차별 날짜 (10/19 ~ 11/30, 월~금) */
 const WEEKS = [
@@ -446,7 +446,7 @@ async function submitForm() {
   btn.disabled = true; btn.textContent = '제출 중...';
 
   try {
-    if (SCRIPT_URL && SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbzkHywtwY9YvKUbqhmu2-SPJBALIvDoqhyI6j7J1v6mTKXMrBWTLBtIpvRdDHoAGzT-SQ/exec') {
+    if (SCRIPT_URL && SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL_HERE') {
       await fetch(SCRIPT_URL, {
         method:'POST', mode:'no-cors',
         headers:{'Content-Type':'text/plain'},
