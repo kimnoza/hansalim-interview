@@ -446,7 +446,7 @@ async function submitForm() {
   btn.disabled = true; btn.textContent = '제출 중...';
 
   try {
-    if (SCRIPT_URL && SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL_HERE') {
+    if (SCRIPT_URL && SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbzkHywtwY9YvKUbqhmu2-SPJBALIvDoqhyI6j7J1v6mTKXMrBWTLBtIpvRdDHoAGzT-SQ/exec') {
       await fetch(SCRIPT_URL, {
         method:'POST', mode:'no-cors',
         headers:{'Content-Type':'text/plain'},
